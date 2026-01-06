@@ -1,0 +1,91 @@
+:root{
+  --bg-1: #0f1724;
+  --bg-2: #0b1220;
+  --card: #0f1724;
+  --accent: #6dd3b0;
+  --accent-2: #6ea8ff;
+  --muted: #9aa4b2;
+  --glass: rgba(255,255,255,0.03);
+  --radius: 12px;
+  font-synthesis: none;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(110,168,255,0.06), transparent), linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 20px}
+.card.pane{width:100%;max-width:880px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:28px;box-shadow:0 8px 30px rgba(3,6,15,0.6);backdrop-filter: blur(6px);}
+.hero{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+.title{font-size:1.6rem;margin:0;font-weight:700}
+.subtitle{margin:6px 0 0;color:var(--muted);font-size:0.98rem}
+.hero-right{font-size:34px}
+
+.upload-form{display:flex;flex-direction:column;gap:14px}
+.file-input{display:block;position:relative;border-radius:10px;padding:18px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);cursor:pointer;transition:all .18s ease}
+.file-input input[type="file"]{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer}
+.file-input-label{display:block;font-weight:600}
+.file-input-hint{display:block;color:var(--muted);font-size:0.85rem;margin-top:6px}
+.actions{display:flex;gap:10px;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:10px;padding:10px 14px;border:0;font-weight:600;cursor:pointer;background:transparent;color:inherit}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04202a;box-shadow:0 6px 20px rgba(109,211,176,0.12)}
+.btn.ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.btn.small{padding:8px 10px;font-size:0.9rem;border-radius:8px}
+
+.results{margin-top:20px}
+.results-title{margin:8px 0 12px;font-size:1.05rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.file-card{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
+.file-info{font-size:0.95rem;color:#dfe9f5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:70%}
+.muted{color:var(--muted);font-size:0.9rem;margin-top:16px}
+
+@media (max-width:560px){
+  .hero{flex-direction:row-reverse}
+  .hero-right{font-size:26px}
+  .title{font-size:1.2rem}
+}
+
+/* subtle focus/accessibility */
+.file-input:focus-within{outline:2px solid rgba(110,168,255,0.12);transform:translateY(-1px)}
+.btn:active{transform:translateY(1px)}
+
+/* small helpers */
+.container{max-width:1100px;margin:0 auto}
+body {
+    background: #0f0f0f;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 480px;
+    margin: 80px auto;
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+input, button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+}
+
+button {
+    background: #00c853;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+a {
+    color: #00e5ff;
+    text-decoration: none;
+}
